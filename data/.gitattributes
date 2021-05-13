@@ -1,2 +1,0 @@
-data/London_Street_Tree_Data_28September2020.csv filter=lfs diff=lfs merge=lfs -text
-data/core_london_street_trees.csv filter=lfs diff=lfs merge=lfs -text
