@@ -18,6 +18,9 @@
     "cool-spaces": { "mbtiles": "cool-spaces.mbtiles" },
     "cool-spaces-avg-land-surface-temp": {
       "mbtiles": "cool-spaces-avg-land-surface-temp.mbtiles"
+    },
+    "cool-spaces-avg-land-surface-hex": {
+      "mbtiles": "cool-spaces-avg-land-surface-hex.mbtiles"
     }
   },
   "styles": {
