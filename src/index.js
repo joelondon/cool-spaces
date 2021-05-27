@@ -6,13 +6,6 @@ import './index.css'
 import { App } from './App'
 import * as serviceWorker from './serviceWorker'
 
-// SEMANTIC UI CSS
-const styleLink = document.createElement('link')
-styleLink.rel = 'stylesheet'
-styleLink.href =
-  'https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css'
-document.head.appendChild(styleLink)
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)

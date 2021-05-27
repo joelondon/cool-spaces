@@ -1,0 +1,14 @@
+- show stations on the basemap
+- publish site at https://apps.london.gov.uk/cool-spaces
+- Info box - Water features: if there are no water features can we show ‘no water feature on site’ instead of ‘other’?
+- Info box - Please add the tier (maybe at the top under the name, something like: “Outdoor – Tier 1” (also to distinguish when we add the indoor spaces)
+- DONE add fullscreen option
+- DONE mention GiGL in tree canopy data
+- DONE I think the 'cool areas' layer could be visible at a slightly more zoomed in view
+- DONE hide water fountains (might not be operational due to pandemic)
+- DONE Find a cool space - facilities: please remove the ‘shaded’ option (all spaces are shaded)
+- DONE feedback - fireandresilience@london.gov.uk
+- DONE Data/layers: please note that we are not using the ‘Tier 3’ shaded areas dataset – tier 1, 2 and 3 sites are now included in the most recent cool spaces dataset – so this layer can be removed
+- DONE Canopy cover layer is still very similar to cool spaces layer visually (and canopy dominates- I think it should be the opposite). Can we maybe add transparency to the canopy and/or maybe play with colour for cool spaces?
+- DONE call it tree canopy cover
+- DONE Also can you please change the water feature logo for a similar one but without the person – it currently might imply people can go in the water (that is only true for splash parks, for all other features it is just about the proximity to water making temperature cooler).

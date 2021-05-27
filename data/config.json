@@ -21,6 +21,12 @@
     },
     "cool-spaces-avg-land-surface-hex": {
       "mbtiles": "cool-spaces-avg-land-surface-hex.mbtiles"
+    },
+     "cool-spaces-canopy-cover": {
+      "mbtiles": "cool-spaces-canopy-cover.mbtiles"
+    },
+    "cool-spaces-tier-three-spaces": {
+      "mbtiles": "cool-spaces-tier-three-spaces.mbtiles"
     }
   },
   "styles": {

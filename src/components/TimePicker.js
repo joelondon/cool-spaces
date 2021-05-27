@@ -96,7 +96,7 @@ export default function TimePicker() {
               '23',
               '24'
             ].map(el => (
-              <MenuItem name={el} value={el} on>
+              <MenuItem name={el} key={el} value={el} on>
                 {el}
               </MenuItem>
             ))}

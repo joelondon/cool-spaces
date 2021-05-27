@@ -1,9 +1,9 @@
 import { makeStyles } from '@material-ui/core/styles'
 
 export const drawerWidth =
-  window.innerWidth < 500
+  window.innerWidth < 600
     ? document.querySelector('#root').offsetWidth
-    : document.querySelector('#root').offsetWidth / 2
+    : document.querySelector('#root').offsetWidth * 0.378
 
 export const useStyles = makeStyles(theme => ({
   root: {
@@ -16,6 +16,11 @@ export const useStyles = makeStyles(theme => ({
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen
       })
+    },
+    [theme.breakpoints.down('sm')]: {
+      right: `calc(100% - 4em) !important`,
+      bottom: `0 !important`,
+      top: `unset !important`
     }
   },
   appBarShift: {
@@ -36,7 +41,13 @@ export const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('sm')]: { width: drawerWidth, flexShrink: 0 }
   },
   drawerPaper: {
-    width: drawerWidth
+    [theme.breakpoints.up('sm')]: {
+      width: drawerWidth
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '100%'
+      // height: `${windowHeight * 1.618 - windowHeight}px !important`
+    }
   },
   drawerHeader: {
     display: 'flex',
@@ -62,26 +73,6 @@ export const useStyles = makeStyles(theme => ({
       duration: theme.transitions.duration.enteringScreen
     }),
     marginRight: 0
-  },
-  // heading: {
-  //   fontSize: theme.typography.pxToRem(15),
-  //   flexBasis: '33.33%',
-  //   flexShrink: 0
-  // },
-  // secondaryHeading: {
-  //   fontSize: theme.typography.pxToRem(15),
-  //   color: theme.palette.text.secondary
-  // },
-  chips: {
-    textAlign: 'center',
-    margin: '1rem auto',
-    width: 'calc(100% - 2rem)'
-  },
-  chip: {
-    margin: '.1rem'
-  },
-  chipUnSelected: {
-    backgroundColor: 'gray !important'
   },
   formControl: {
     margin: theme.spacing(1),

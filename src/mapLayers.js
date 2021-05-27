@@ -1,30 +1,29 @@
 export const mapLayers = {
-  'borough designated cool spaces': {
+  'Cool spaces': {
     value: 'boroughdesignatedcoolspaces',
     showing: true,
-    about: 'boroughdesignatedcoolspaces'
+    about: 'note: facility filters work on this layer'
   },
-
-  'other public shaded green areas': {
-    value: 'otherpublicshadedgreenareas',
-    showing: true,
-    about: 'otherpublicshadedgreenareas'
-  },
-  'water fountains': {
-    value: 'waterfountains',
-    showing: true,
-    about: 'waterfountains'
-  },
-
-  'water courses': {
+  // 'Water fountains': {
+  //   value: 'findafountain',
+  //   showing: true,
+  //   about: 'Source: find a fountain'
+  // },
+  'Water courses': {
     value: 'watercourses',
     showing: true,
-    about: 'watercourses'
+    about: 'Water cools the air, so these places can be less hot'
   },
-
-  'density of cooler land surface': {
+  'Tree canopy cover': {
+    value: 'treecanopy',
+    showing: true,
+    about:
+      'Location of shade. Data: https://data.london.gov.uk/dataset/curio-canopy'
+  },
+  'Cooler areas': {
     value: 'avgLST_London_UrbanAtlas',
     showing: true,
-    about: 'avgLST_London_UrbanAtlas'
+    about:
+      "Modelled average land surface temperature - the more visible this layer's information is, the cooler the area is likely to be"
   }
 }
