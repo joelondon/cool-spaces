@@ -28,14 +28,22 @@ export default function SwitchesGroup(props) {
     })
   }
 
-  const legendColour = (el, legend, layers) =>
-    el.includes('cooler land')
-      ? 'rgba(0,255,255,0.9)'
-      : legend
-      ? legend.filter(key => Object.keys(key)[0] === layers[el].value)[0][
-          layers[el].value
-        ]
-      : ''
+  const legendColour = (el, legend, layers) => {
+    switch (el) {
+      case 'Cool spaces':
+        return '#6A64AD'
+      case 'Cooler areas':
+        return 'rgba(0,255,255,0.9)'
+      case 'Water fountains':
+        return '#43B7EF'
+      default:
+        return legend
+          ? legend.filter(key => Object.keys(key)[0] === layers[el].value)[0][
+              layers[el].value
+            ]
+          : ''
+    }
+  }
 
   const [anchorEl, setAnchorEl] = React.useState(null)
   const [aboutText, setAboutText] = React.useState(null)
