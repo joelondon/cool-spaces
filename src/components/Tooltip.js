@@ -108,7 +108,7 @@ const Tooltip = ({ feature }) => {
         ''
       )*/}
         <Typography variant="h4" gutterBottom>
-          {cool_space_name} Outdoor space{' '}
+          {cool_space_name}
         </Typography>
         <Typography variant="h5" gutterBottom>
           Outdoor - {tier}
