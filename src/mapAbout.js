@@ -18,8 +18,8 @@ Data information and credits:
 
 The cool spaces map uses data from the following sources:
 
-* Tree canopy cover: data from [ARTi Analytics](https://data.london.gov.uk/dataset/major-summer-heatspots-using-landsat-8-thermal-satellite-data)
-* Surface temperature map – Data from Curio Canopy - [London Tree Canopy Cover](https://data.london.gov.uk/dataset/curio-canopy), produced by Breadboard Labs
-* Basemap – data from [Openstreetmap](https://osm.org) and cartography by [Maptiler](https://maptiler.com/)
+* Tree canopy cover: Data from [London Tree Canopy Cover](https://data.london.gov.uk/dataset/curio-canopy)
+* Surface temperature map: Data from [ARTi Analytics](https://data.london.gov.uk/dataset/major-summer-heatspots-using-landsat-8-thermal-satellite-data)
+* Basemap: Data from [Openstreetmap](https://osm.org), Cartography by [Maptiler](https://maptiler.com/)
 `
 export const mapAbout = <ReactMarkdown>{markdown}</ReactMarkdown>
