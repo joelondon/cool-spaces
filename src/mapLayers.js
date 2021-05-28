@@ -2,7 +2,8 @@ export const mapLayers = {
   'Cool spaces': {
     value: 'boroughdesignatedcoolspaces',
     showing: true,
-    about: 'note: facility filters work on this layer'
+    about:
+      'These locations have been designated as cool spaces where refuge can be sought during heatwaves'
   },
   // 'Water fountains': {
   //   value: 'findafountain',
