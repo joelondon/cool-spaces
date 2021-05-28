@@ -49,7 +49,7 @@
       "url": "https://apps.london.gov.uk/tileserver/data/cool-spaces-canopy-cover.json"
     }
   },
-  "sprite": "https://apps.london.gov.uk/cool-spaces-sprites/sprite",
+  "sprite": "https://apps.london.gov.uk/cors/https://apps.london.gov.uk/cool-spaces-sprites/sprite",
   "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=cvbQhnI5r6wOG8EnuyF0",
   "layers": [
     {
@@ -1362,19 +1362,6 @@
       }
     },
     {
-      "id": "otherpublicshadedgreenareas",
-      "type": "fill",
-      "source": "tileserver-gl",
-      "source-layer": "otherpublicshadedgreenareas",
-      "layout": {
-        "visibility": "none"
-      },
-      "paint": {
-        "fill-color": "rgba(188, 241, 210, 0.9)",
-        "fill-outline-color": "rgba(188, 241, 210, 0.5)"
-      }
-    },
-    {
       "id": "boroughdesignatedcoolspaces",
       "type": "fill",
       "source": "tileserver-gl",
@@ -1418,28 +1405,6 @@
         "line-color": "#3399cc",
         "line-width": 10,
         "line-blur": 8
-      }
-    },
-    {
-      "id": "waterfountains",
-      "type": "circle",
-      "source": "tileserver-gl",
-      "source-layer": "waterfountains",
-      "layout": {
-        "visibility": "none"
-      },
-      "paint": {
-        "circle-color": "#40a4df",
-        "circle-radius": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          8,
-          ["interpolate", ["linear"], ["number", ["get", ""]], 0, 0],
-          20,
-          ["interpolate", ["linear"], ["number", ["get", ""]], 10, 10]
-        ],
-        "circle-blur": 0.1
       }
     },
     {

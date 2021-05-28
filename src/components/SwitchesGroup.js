@@ -31,7 +31,7 @@ export default function SwitchesGroup(props) {
   const legendColour = (el, legend, layers) => {
     switch (el) {
       case 'Cool spaces':
-        return '#6A64AD'
+        return '#7E7CB9'
       case 'Cooler areas':
         return 'rgba(0,255,255,0.9)'
       case 'Water fountains':

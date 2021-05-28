@@ -2,20 +2,24 @@ import React from 'react'
 import ReactMarkdown from 'react-markdown'
 
 const markdown = `
+# About London’s  Cool Spaces
 
-# Ways to cool down
+Cool spaces are indoor or outdoor areas where Londoners can take respite on hot days. Cool space sites have been put forward by boroughs, community groups, faith based and other organisations following an  invitation to register process. The cool spaces are categorised by three tiers that can apply to indoor and outdoor spaces:
 
-* Shut windows and pull down the shades (or close curtains) when it is hotter outside. You can open the windows for ventilation when it is cooler
-* Avoid the heat: stay out of the sun between 11am and 3pm (the hottest part of the day) if you're vulnerable to the effects of heat Wear loose, cool clothing and a hat and sunglasses if you go outdoors
-* Drink plenty of fluids to stay hydrated
-* Check up on friends, relatives and neighbours who may be less able to look after themselves.
-* Keep rooms cool by using shades or reflective material outside the windows. If this isn't possible, use light-coloured curtains and keep them closed (metallic blinds and dark curtains can make the room hotter)
-* Have a cool bath or shower, and splash yourself with cool water
-* Listen to alerts on the radio, TV and social media about keeping cool
-* Plan ahead to make sure you have enough supplies, such as
-food, water and any medications you need
-* Identify the coolest room in the house so you know where to go to keep cool.
-* Please remember to stay at a safe social distance to prevent the spread of COVID-19
+* Tier 1 has the greatest number of minimum amenities that Londoners can expect from a cool space.
+* Tier 2 has the second greatest number of minimum amenities.
+* Tier 3 includes outdoor green and blue spaces which, although not providing the minimum amenities for tiers 1 and 2, provide suitable shading conditions.
+
+The tiered approach to classifying cool spaces is meant to provide Londoners with a better understanding of what can be expected from spaces and how certain spaces can better fit their needs. More information about cool spaces and the criteria for the different tiers can be found here.
+
+When using London’s parks and green spaces, please remember to follow guidelines on social distancing. Read PHE guidance on Coping with heat and COVID-19 and the Mayor’s guidance on keeping cool on hot days.
+
+Data information and credits:
+
+The cool spaces map uses data from the following sources:
+
+* Tree canopy cover: data from [ARTi Analytics](https://data.london.gov.uk/dataset/major-summer-heatspots-using-landsat-8-thermal-satellite-data)
+* Surface temperature map – Data from Curio Canopy - [London Tree Canopy Cover](https://data.london.gov.uk/dataset/curio-canopy), produced by Breadboard Labs
+* Basemap – data from [Openstreetmap](https://osm.org) and cartography by [Maptiler](https://maptiler.com/)
 `
-
 export const mapAbout = <ReactMarkdown>{markdown}</ReactMarkdown>

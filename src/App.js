@@ -170,8 +170,8 @@ function App({ showBorder = false, onTilesLoad = null }) {
           scrollButtons="auto"
           aria-label="scrollable force tabs"
         >
-          <Tab label="Find a cool space" {...tabsProps(0)} />
-          <Tab label="Layers" {...tabsProps(1)} />
+          <Tab label="Layers" {...tabsProps(0)} />
+          <Tab label="Find a cool space" {...tabsProps(1)} />
           <Tab label="Feedback" {...tabsProps(2)} />
           <Tab label="Register a cool space" {...tabsProps(3)} />
           <Tab label="About" {...tabsProps(4)} />
@@ -392,10 +392,40 @@ function App({ showBorder = false, onTilesLoad = null }) {
         <Divider />
         {!smallScreen && <TabsContent />}
         <TabPanel value={tabValue} index={0}>
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center'
+            }}
+          >
+            <SwitchesGroup
+              layers={layers}
+              setLayers={setLayers}
+              legend={legend}
+            />
+            <FormLabel component="legend">
+              To search for cool spaces in a specific location or near you,
+              please go to the{' '}
+              <span style={{ fontVariant: 'small-caps' }}>
+                Find a cool space
+              </span>{' '}
+              tab
+            </FormLabel>
+          </div>
+        </TabPanel>
+        <TabPanel value={tabValue} index={1}>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center'
+            }}
+          >
             <FormControl component="fieldset" fullWidth={true}>
               <FormLabel component="legend">
-                Choose facilities and location by search or your device position
+                Choose facilities and location by search or your device
+                position.
               </FormLabel>
               <Facilities map={map} />
               <Geocoder map={map} />
@@ -403,15 +433,10 @@ function App({ showBorder = false, onTilesLoad = null }) {
                 <Tooltip feature={feature} />
               )*/}
             </FormControl>
-          </div>
-        </TabPanel>
-        <TabPanel value={tabValue} index={1}>
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <SwitchesGroup
-              layers={layers}
-              setLayers={setLayers}
-              legend={legend}
-            />
+            <FormLabel component="legend">
+              To choose what map features to view, please select from the{' '}
+              <span style={{ fontVariant: 'small-caps' }}>layers</span> tab
+            </FormLabel>
           </div>
         </TabPanel>
         <TabPanel value={tabValue} index={2}>
