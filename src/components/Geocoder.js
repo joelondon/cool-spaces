@@ -63,7 +63,7 @@ export function Geocoder(props) {
         const success = position => {
           lng = position.coords.longitude
           lat = position.coords.latitude
-          zoom = 17
+          zoom = 13
           setIsLocating(false)
           fly(lng, lat, zoom)
         }
@@ -71,7 +71,7 @@ export function Geocoder(props) {
       } else {
         lng = selection.geometry.coordinates[0]
         lat = selection.geometry.coordinates[1]
-        zoom = 14
+        zoom = 13
         fly(lng, lat, zoom)
       }
       map.getSource('single-point').setData({
@@ -124,7 +124,7 @@ export function Geocoder(props) {
           return option.place_name === value.place_name
         }}
         renderInput={params => (
-          <TextField {...params} label="Search a location" />
+          <TextField {...params} label="Search a location or postcode" />
         )}
       />
       {isLocating || isSearching ? <LinearProgress /> : ''}

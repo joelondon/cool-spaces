@@ -38,6 +38,9 @@ const useStyles = makeStyles(theme => ({
       backgroundColor: 'rgba(0, 0, 0, .5)',
       '-webkit-box-shadow': '0 0 1px rgba(255, 255, 255, .5)'
     }
+  },
+  typography: {
+    padding: theme.spacing(2)
   }
 }))
 
@@ -50,14 +53,15 @@ const Tooltip = ({ feature }) => {
     cs_postcode,
     opening_hour,
     accessible,
-    toliets,
+    toilets,
     free_water,
-    water_nearby,
+    // water_nearby,
     shaded_well,
     about_shade,
     shade_seating,
     water_feature,
-    seating_available
+    seating_available,
+    tier
   } = feature.properties
 
   const [anchorEl, setAnchorEl] = React.useState(null)
@@ -65,7 +69,23 @@ const Tooltip = ({ feature }) => {
 
   const handleInfoClick = (event, el) => {
     setAnchorEl(event.currentTarget)
-    setAboutText(event.currentTarget.getAttribute('about'))
+    switch (tier) {
+      case 'Tier 1':
+        setAboutText(
+          'Tier 1: free public access, open 10-5 weekdays and weekends where possible, free drinking water, fully accessible, toilets, shaded seating, water features'
+        )
+        break
+      case 'Tier 2':
+        setAboutText(
+          'Tier 2: free public access, open at specified times, specified accessibility, drinking water available on site or within walking distance, shaded seating'
+        )
+        break
+      default:
+        setAboutText(
+          'Tier 3: free public access to outdoor open space, some shade available'
+        )
+        break
+    }
   }
 
   const handleInfoClose = () => {
@@ -88,11 +108,36 @@ const Tooltip = ({ feature }) => {
         ''
       )*/}
         <Typography variant="h4" gutterBottom>
-          {cool_space_name}
+          {cool_space_name} Outdoor space{' '}
         </Typography>
+        <Typography variant="h5" gutterBottom>
+          Outdoor - {tier}
+          <InfoOutlinedIcon
+            style={{ height: 'unset', float: 'right' }}
+            onClick={handleInfoClick}
+            about={aboutText}
+          />
+          <Popover
+            id={id}
+            open={open}
+            anchorEl={anchorEl}
+            onClose={handleInfoClose}
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'center'
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'center'
+            }}
+          >
+            <Typography className={classes.typography}>{aboutText}</Typography>
+          </Popover>
+        </Typography>
+
         <Grid container spacing={3} className={classes.scrollGrid}>
           <List dense={true}>
-            {cs_address1 ? (
+            {cs_address1 && cs_postcode ? (
               <Grid item xs>
                 <ListItem>
                   <ListItemIcon>
@@ -101,7 +146,7 @@ const Tooltip = ({ feature }) => {
                   <ListItemText
                     primary={cs_address1}
                     secondary={
-                      (cs_address2 ? cs_address2 : '') +
+                      (cs_address2 && cs_postcode ? cs_address2 : '') +
                       (cs_address2
                         ? cs_postcode
                           ? ' ' + cs_postcode
@@ -133,23 +178,24 @@ const Tooltip = ({ feature }) => {
                   </ListItemIcon>
                   <ListItemText
                     primary={
-                      'Accessible for ' +
-                      JSON.parse(accessible).reduce(
-                        (acc, curr) => acc + `, ` + curr
-                      )
+                      'Accessible for ' + typeof accessible === 'object'
+                        ? JSON.parse(accessible).reduce(
+                            (acc, curr) => acc + `, ` + curr
+                          )
+                        : 'People with disabilities; children; older people; pregnant women; people with underlying health issues'
                     }
                   />
                 </ListItem>
               </Grid>
             ) : null}
 
-            {toliets ? (
+            {toilets ? (
               <Grid item xs>
                 <ListItem>
                   <ListItemIcon>
                     <WcIcon />
                   </ListItemIcon>
-                  <ListItemText primary={toliets} />
+                  <ListItemText primary={toilets} />
                 </ListItem>
               </Grid>
             ) : null}
@@ -160,10 +206,10 @@ const Tooltip = ({ feature }) => {
                     <LocalDrinkIcon />
                   </ListItemIcon>
                   <ListItemText primary="Free drinking water" />
+                  {/*water_nearby ? water_nearby : ''*/}
                 </ListItem>
               </Grid>
             ) : null}
-            {water_nearby ? <div>water_nearby: {water_nearby}</div> : ''}
             {shaded_well && about_shade ? (
               <Grid item xs>
                 <ListItem>
@@ -173,49 +219,21 @@ const Tooltip = ({ feature }) => {
                   <ListItemText
                     primary={
                       about_shade +
-                      (shade_seating ? 'There is also shaded seating' : null)
+                      (shade_seating ? '. There is also shaded seating' : null)
                     }
                   />
                 </ListItem>
               </Grid>
             ) : null}
 
-            {water_feature ? (
+            {water_feature &&
+            !['other', 'No', 'N/A'].includes(water_feature) ? (
               <Grid item xs>
                 <ListItem>
                   <ListItemIcon>
                     <WaterFeatureIcon />
                   </ListItemIcon>
-                  <ListItemText
-                    primary={JSON.parse(water_feature).reduce(
-                      (acc, curr) => acc + `, ` + curr
-                    )}
-                  />
-                  <InfoOutlinedIcon
-                    style={{ height: 'unset' }}
-                    onClick={handleInfoClick}
-                    about={
-                      'note: other can mean that the site has no  water features'
-                    }
-                  />
-                  <Popover
-                    id={id}
-                    open={open}
-                    anchorEl={anchorEl}
-                    onClose={handleInfoClose}
-                    anchorOrigin={{
-                      vertical: 'bottom',
-                      horizontal: 'center'
-                    }}
-                    transformOrigin={{
-                      vertical: 'top',
-                      horizontal: 'center'
-                    }}
-                  >
-                    <Typography className={classes.typography}>
-                      {aboutText}
-                    </Typography>
-                  </Popover>
+                  <ListItemText primary={water_feature} />
                 </ListItem>
               </Grid>
             ) : null}
