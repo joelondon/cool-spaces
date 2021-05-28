@@ -3,7 +3,7 @@ import mapboxgl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import ReactDOM from 'react-dom'
 
-import { useFullscreen, useToggle } from 'react-use'
+// import { useFullscreen, useToggle } from 'react-use'
 
 import PropTypes from 'prop-types'
 
@@ -33,8 +33,8 @@ import Paper from '@material-ui/core/Paper'
 import FormControl from '@material-ui/core/FormControl'
 import FormLabel from '@material-ui/core/FormLabel'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
-import FullscreenIcon from '@material-ui/icons/Fullscreen'
-import FullscreenExitIcon from '@material-ui/icons/FullscreenExit'
+// import FullscreenIcon from '@material-ui/icons/Fullscreen'
+// import FullscreenExitIcon from '@material-ui/icons/FullscreenExit'
 
 import SwitchesGroup from './components/SwitchesGroup'
 import { Geocoder } from './components/Geocoder'
@@ -56,10 +56,10 @@ function App({ showBorder = false, onTilesLoad = null }) {
   const classes = useStyles(theme)
 
   const ref = useRef(null)
-  const [show, toggle] = useToggle(false)
-  const isFullscreen = useFullscreen(ref, show, {
-    onClose: () => toggle(false)
-  })
+  // const [show, toggle] = useToggle(false)
+  // const isFullscreen = useFullscreen(ref, show, {
+  //   onClose: () => toggle(false)
+  // })
 
   Survey.StylesManager.applyTheme('bootstrap')
 
@@ -385,9 +385,9 @@ function App({ showBorder = false, onTilesLoad = null }) {
           <h3 style={{ textAlign: 'center', margin: '0 auto' }}>
             LONDON COOL SPACES
           </h3>{' '}
-          <IconButton onClick={toggle}>
+          {/*<IconButton onClick={toggle}>
             {isFullscreen ? <FullscreenExitIcon /> : <FullscreenIcon />}
-          </IconButton>
+          </IconButton>*/}
         </div>
         <Divider />
         {!smallScreen && <TabsContent />}
