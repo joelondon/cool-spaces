@@ -52,7 +52,7 @@
       "url": "https://apps.london.gov.uk/tileserver/data/cool-spaces-canopy-cover.json"
     }
   },
-  "sprite": "https://apps.london.gov.uk/cool-spaces-sprites/sprite",
+  "sprite": "https://apps.london.gov.uk/cors/https://apps.london.gov.uk/cool-spaces-sprites/sprite",
   "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=cvbQhnI5r6wOG8EnuyF0",
   "layers": [
     {
@@ -1393,138 +1393,6 @@
       }
     },
     {
-      "id": "avgLST_London_UrbanAtlas-centroids",
-      "type": "heatmap",
-      "source": "tileserver-gl-cool-spaces-avg-land-surface-temp",
-      "source-layer": "avgLST_London_UrbanAtlas_hex_centroids",
-      "maxzoom": 20,
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "heatmap-weight": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "-",
-            40,
-            [
-              "number",
-              [
-                "get",
-                "avgLST"
-              ]
-            ]
-          ],
-          0,
-          -0.2,
-          40,
-          0.7
-        ],
-        "heatmap-radius": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          0,
-          1,
-          10,
-          15,
-          20,
-          200
-        ],
-        "heatmap-intensity": 4,
-        "heatmap-opacity": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "zoom"
-          ],
-          10,
-          1,
-          18,
-          0
-        ],
-        "heatmap-color": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "heatmap-density"
-          ],
-          0,
-          "rgba(0,0,0,0)",
-          0.1,
-          "rgba(0,255,255,0.1)",
-          0.2,
-          "rgba(0,255,255,0.2)",
-          0.8,
-          "rgba(0,255,255,0.4)",
-          1,
-          "rgba(0,255,255,0.8)"
-        ]
-      }
-    },
-    {
-      "id": "avgLST_London_UrbanAtlas-hex",
-      "type": "fill",
-      "source": "tileserver-gl-cool-spaces-avg-land-surface-hex",
-      "source-layer": "avgLST_London_UrbanAtlas",
-      "maxzoom": 24,
-      "layout": {
-        "visibility": "visible"
-      },
-      "paint": {
-        "fill-color": [
-          "interpolate",
-          [
-            "cubic-bezier",
-            1,
-            0,
-            1,
-            1
-          ],
-          [
-            "zoom"
-          ],
-          0,
-          "rgba(0,255,255,1)",
-          20,
-          "rgba(0,255,255,0)"
-        ],
-        "fill-opacity": [
-          "interpolate",
-          [
-            "linear"
-          ],
-          [
-            "-",
-            40,
-            [
-              "number",
-              [
-                "get",
-                "avgLST"
-              ]
-            ]
-          ],
-          1,
-          -0.4,
-          20,
-          0.5
-        ],
-        "fill-antialias": false
-      }
-    },
-    {
       "id": "boundary_state",
       "type": "line",
       "metadata": {
@@ -1668,6 +1536,150 @@
             ]
           ]
         }
+      }
+    },
+    {
+      "id": "avgLST_London_UrbanAtlas-centroids",
+      "type": "heatmap",
+      "source": "tileserver-gl-cool-spaces-avg-land-surface-temp",
+      "source-layer": "avgLST_London_UrbanAtlas_hex_centroids",
+      "maxzoom": 20,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "heatmap-weight": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "-",
+            40,
+            [
+              "number",
+              [
+                "get",
+                "avgLST"
+              ]
+            ]
+          ],
+          0,
+          -0.2,
+          40,
+          0.7
+        ],
+        "heatmap-radius": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          1,
+          10,
+          15,
+          20,
+          200
+        ],
+        "heatmap-intensity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          0.4,
+          20,
+          10
+        ],
+        "heatmap-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          1,
+          18,
+          0.5
+        ],
+        "heatmap-color": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "heatmap-density"
+          ],
+          0,
+          "rgba(0,0,0,0)",
+          0.1,
+          "rgba(0,255,255,0.1)",
+          0.2,
+          "rgba(0,255,255,0.2)",
+          0.8,
+          "rgba(0,255,255,0.4)",
+          1,
+          "rgba(0,255,255,0.8)"
+        ]
+      }
+    },
+    {
+      "id": "avgLST_London_UrbanAtlas-hex",
+      "type": "fill",
+      "source": "tileserver-gl-cool-spaces-avg-land-surface-hex",
+      "source-layer": "avgLST_London_UrbanAtlas",
+      "maxzoom": 24,
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": [
+          "interpolate",
+          [
+            "cubic-bezier",
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            "zoom"
+          ],
+          0,
+          "rgba(0,255,255,1)",
+          20,
+          "rgba(0,255,255,0)"
+        ],
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "-",
+            40,
+            [
+              "number",
+              [
+                "get",
+                "avgLST"
+              ]
+            ]
+          ],
+          1,
+          -0.4,
+          15,
+          0.3
+        ],
+        "fill-antialias": false
       }
     },
     {
@@ -2021,6 +2033,76 @@
       }
     },
     {
+      "id": "boroughdesignatedcoolspaces-glow",
+      "type": "heatmap",
+      "source": "tileserver-gl",
+      "source-layer": "boroughdesignatedcoolspaces",
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "heatmap-weight": 0.1,
+        "heatmap-radius": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          5,
+          15,
+          20
+        ],
+        "heatmap-intensity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          2,
+          14,
+          1
+        ],
+        "heatmap-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5,
+          2,
+          14,
+          1.2
+        ],
+        "heatmap-color": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "heatmap-density"
+          ],
+          0,
+          "rgba(0,0,0,0)",
+          0.1,
+          "rgba(126, 124, 185, 0.1)",
+          0.2,
+          "rgba(126, 124, 185, 0.2)",
+          0.8,
+          "rgba(126, 124, 185, 0.4)",
+          1,
+          "rgba(126, 124, 185, 0.8)"
+        ]
+      }
+    },
+    {
       "id": "boroughdesignatedcoolspaces",
       "type": "fill",
       "source": "tileserver-gl",
@@ -2029,10 +2111,21 @@
         "visibility": "visible"
       },
       "paint": {
-        "fill-opacity": 1,
+        "fill-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          8,
+          1.5,
+          20,
+          0
+        ],
         "fill-pattern": "grass-128",
-        "fill-antialias": false,
-        "fill-color": "rgba(214, 255, 119, 1)"
+        "fill-antialias": false
       }
     },
     {
@@ -2047,7 +2140,19 @@
         "fill-extrusion-color": "rgb(5, 170, 5)",
         "fill-extrusion-base": 10,
         "fill-extrusion-height": 20,
-        "fill-extrusion-opacity": 0.5
+        "fill-extrusion-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          5,
+          1.1,
+          14,
+          0.4
+        ]
       }
     },
     {
@@ -2062,8 +2167,45 @@
       },
       "paint": {
         "line-color": "#3399cc",
-        "line-width": 10,
-        "line-blur": 8
+        "line-width": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          3,
+          15,
+          10
+        ],
+        "line-blur": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          1,
+          20,
+          0
+        ],
+        "line-opacity": [
+          "interpolate",
+          [
+            "linear"
+          ],
+          [
+            "zoom"
+          ],
+          10,
+          1,
+          20,
+          1
+        ]
       }
     },
     {

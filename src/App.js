@@ -352,15 +352,16 @@ function App({ showBorder = false, onTilesLoad = null }) {
               top: 0,
               left: 0,
               height: '100%',
-              width: `${
-                smallScreen
-                  ? '100%'
-                  : drawerOpen
-                  ? document.querySelector('#root').offsetWidth -
-                    drawerWidth +
-                    'px'
-                  : '100%'
-              }`
+              width: '100%'
+              // `${
+              //   smallScreen
+              //     ? '100%'
+              //     : drawerOpen
+              //     ? document.querySelector('#root').offsetWidth -
+              //       drawerWidth +
+              //       'px'
+              //     : '100%'
+              // }`
             }}
           />
         </div>
@@ -408,7 +409,7 @@ function App({ showBorder = false, onTilesLoad = null }) {
               To search for cool spaces in a specific location or near you,
               please go to the{' '}
               <span style={{ fontVariant: 'small-caps' }}>
-                Find a cool space
+                find a cool space
               </span>{' '}
               tab
             </FormLabel>
