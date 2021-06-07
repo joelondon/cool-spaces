@@ -33,8 +33,6 @@
 
 ## About The Project
 
-[![Cool Spaces Screen Shot](docs/mobile-map.png)](https://apps.london.gov.uk/cool-spaces)
-
 ### Built with
 
 - [node](https://nodejs.org/en/)
@@ -132,7 +130,7 @@ We use `tileserver-gl-light` to provide the `.mbtiles` SQLite database
 Using `ogr2ogr` to get GeoJSON out of Postgis for .mbtiles creation via Tippecanoe
 
 ```
-ogr2ogr -t_srs "EPSG:4326" -f GeoJSON -lco COORDINATE_PRECISION=5 avg-summer-temp-city-block.geojson "PG:host=3.11.224.244 dbname=gla_gis user=gisapdata password=gi\$own" -sql "select avglst, std_avglst, min_avglst, max_avglst, shape as geom FROM env_cs_average_summer_temperature_city_block"
+ogr2ogr -t_srs "EPSG:4326" -f GeoJSON -lco COORDINATE_PRECISION=5 avg-summer-temp-city-block.geojson "PG:host=3.11.224.244 dbname=gla_gis user=gisapdata password=******" -sql "select avglst, std_avglst, min_avglst, max_avglst, shape as geom FROM env_cs_average_summer_temperature_city_block"
 ```
 
 #### Convert resulting GeoJSON into .mbtiles with Tippecanoe
