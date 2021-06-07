@@ -1,8 +1,0 @@
-demos/
-node_modules/
-cypress/
-build/
-.DS_Store
-*.geojson
-*.mbtiles
-
