@@ -2237,7 +2237,7 @@
         },
         "text-size": 12,
         "text-max-width": 20,
-        "visibility": "none"
+        "visibility": "visible"
       },
       "paint": {
         "text-opacity": {
