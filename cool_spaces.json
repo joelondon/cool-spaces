@@ -52,7 +52,7 @@
       "url": "https://apps.london.gov.uk/tileserver/data/cool-spaces-canopy-cover.json"
     }
   },
-  "sprite": "https://apps.london.gov.uk/cool-spaces-sprites/sprite",
+  "sprite": "https://apps.london.gov.uk/cors/https://apps.london.gov.uk/cool-spaces-sprites/sprite",
   "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=cvbQhnI5r6wOG8EnuyF0",
   "layers": [
     {
