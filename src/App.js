@@ -79,6 +79,15 @@ function App({ showBorder = false, onTilesLoad = null }) {
     setDrawerOpen(true)
     setTimeout(function() {
       map && map.resize()
+      smallScreen
+        ? map.easeTo({
+            padding: { bottom: 300 },
+            duration: 1000
+          })
+        : map.easeTo({
+            padding: { right: 300 },
+            duration: 1000
+          })
     }, 100)
   }
 
@@ -86,7 +95,20 @@ function App({ showBorder = false, onTilesLoad = null }) {
     setDrawerOpen(false)
     setTimeout(function() {
       map && map.resize()
+      smallScreen
+        ? map.easeTo({
+            padding: { top: 300 },
+            duration: 1000
+          })
+        : map.easeTo({
+            padding: { left: 300 },
+            duration: 1000
+          })
     }, 10)
+  }
+
+  const drawerOpened = e => {
+    console.log(e, 'opened')
   }
 
   const MenuButton = ({ bottom }) => {
@@ -224,7 +246,7 @@ function App({ showBorder = false, onTilesLoad = null }) {
     map.addControl(
       new mapboxgl.NavigationControl({
         showCompass: false,
-        showZoom: window.innerWidth > 600 ? true : false
+        showZoom: smallScreen ? true : false
       }),
       'top-left'
     )
@@ -373,8 +395,8 @@ function App({ showBorder = false, onTilesLoad = null }) {
         variant="persistent"
         anchor={smallScreen ? 'bottom' : 'right'}
         open={drawerOpen}
-        onOpen={() => console.log('opened')}
-        onClose={() => console.log('closed')}
+        onOpen={drawerOpened}
+        onClose={drawerOpened}
         classes={{
           paper: classes.drawerPaper
         }}
