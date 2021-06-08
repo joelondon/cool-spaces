@@ -11,7 +11,7 @@ import { mapLayers } from './mapLayers.js'
 import { mapAbout } from './mapAbout.js'
 import Tooltip from './components/Tooltip'
 
-import { drawerWidth, useStyles } from './styles.jsx'
+import { useStyles } from './styles.jsx'
 
 import usePersistedState from './hooks/usePersistedState'
 import clsx from 'clsx'
