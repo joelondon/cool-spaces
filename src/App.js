@@ -81,14 +81,14 @@ function App({ showBorder = false, onTilesLoad = null }) {
       map && map.resize()
       smallScreen
         ? map.easeTo({
-            padding: { bottom: 300 },
+            padding: { bottom: 150, top: 0 },
             duration: 1000
           })
         : map.easeTo({
-            padding: { right: 300 },
+            padding: { right: 150, left: 0 },
             duration: 1000
           })
-    }, 100)
+    }, 10)
   }
 
   const handleDrawerClose = () => {
@@ -97,11 +97,11 @@ function App({ showBorder = false, onTilesLoad = null }) {
       map && map.resize()
       smallScreen
         ? map.easeTo({
-            padding: { top: 300 },
+            padding: { top: 150, bottom: 0 },
             duration: 1000
           })
         : map.easeTo({
-            padding: { left: 300 },
+            padding: { left: 150, right: 0 },
             duration: 1000
           })
     }, 10)
