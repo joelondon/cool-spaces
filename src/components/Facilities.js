@@ -53,8 +53,10 @@ export default function Facilities({ map }) {
       const filter = newValue.map(el => el.filter)
       filter.unshift('all')
       map && map.setFilter('boroughdesignatedcoolspaces', filter)
+      map && map.setFilter('boroughdesignatedcoolspaces-glow', filter)
     } else {
       map && map.setFilter('boroughdesignatedcoolspaces', null)
+      map && map.setFilter('boroughdesignatedcoolspaces-glow', null)
     }
   }
 
