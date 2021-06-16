@@ -428,12 +428,28 @@ function App({ showBorder = false, onTilesLoad = null }) {
               legend={legend}
             />
             <FormLabel component="legend">
-              To search for cool spaces in a specific location or near you,
-              please go to the{' '}
-              <span style={{ fontVariant: 'small-caps' }}>
-                find a cool space
-              </span>{' '}
-              tab
+              <p>
+                To search for cool spaces in a specific location or near you,
+                please go to the{' '}
+                <span style={{ fontVariant: 'small-caps' }}>
+                  find a cool space
+                </span>{' '}
+                tab
+              </p>
+              <p>
+                More information about cool spaces tiers and the sources of data
+                for the different layers on the map can be found in the{' '}
+                <span style={{ fontVariant: 'small-caps' }}>about</span> tab
+              </p>
+              <p>
+                We are still accepting new registrations of indoor and outdoor
+                cool spaces. If you would like to register a site please
+                complete the form in the{' '}
+                <span style={{ fontVariant: 'small-caps' }}>
+                  register a cool space
+                </span>{' '}
+                tab
+              </p>
             </FormLabel>
           </div>
         </TabPanel>
@@ -447,8 +463,8 @@ function App({ showBorder = false, onTilesLoad = null }) {
           >
             <FormControl component="fieldset" fullWidth={true}>
               <FormLabel component="legend">
-                Choose facilities and location by search or your device
-                position.
+                Filter cool spaces by facilities and find a location by search
+                or your device position.
               </FormLabel>
               <Facilities map={map} />
               <Geocoder map={map} />
