@@ -109,7 +109,11 @@ export default function Feedback() {
         </Alert>
       </Snackbar>
       <FormControl component="fieldset" fullWidth={true}>
-        <FormLabel component="legend">Email the team</FormLabel>
+        <FormLabel component="legend">
+          We are keen to hear from users of the map as to what they found useful
+          and any improvements we could make. Please leave your comments,
+          suggestions or questions to the team below.
+        </FormLabel>
         <form
           onSubmit={handleSubmit}
           className={classes.root}
