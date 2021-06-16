@@ -41,21 +41,6 @@ const options = [
     title: 'Toilets',
     value: 'toilets',
     filter: ['in', ['get', 'toilets'], 'Toilets are available on site']
-  },
-  {
-    title: 'Tier 1',
-    value: 'Tier 1',
-    filter: ['in', ['get', 'tier'], 'Tier 1']
-  },
-  {
-    title: 'Tier 2',
-    value: 'Tier 2',
-    filter: ['in', ['get', 'tier'], 'Tier 2']
-  },
-  {
-    title: 'Tier 3',
-    value: 'Tier 3',
-    filter: ['in', ['get', 'tier'], 'Tier 3']
   }
 ]
 
