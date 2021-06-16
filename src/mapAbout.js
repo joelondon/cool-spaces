@@ -10,7 +10,7 @@ Cool spaces are indoor or outdoor areas where Londoners can take respite on hot 
 * Tier 2 spaces offer some of the amenities above, but not all. Tier 2 cool spaces still provide good cooling conditions and have the level of accessibility to disabled people clearly stated.
 * Tier 3 includes outdoor green and blue spaces which, although not offering the minimum amenities for tiers 1 and 2, provide suitable cooling conditions.
 
-The tiered approach to classifying cool spaces is meant to provide Londoners with a better understanding of what can be expected from spaces and how certain spaces can better fit their needs. More information about cool spaces and the criteria for the different tiers can be found here.
+The tiered approach to classifying cool spaces is meant to provide Londoners with a better understanding of what can be expected from spaces and how certain spaces can better fit their needs. More information about cool spaces and the criteria for the different tiers can be found [here](https://www.london.gov.uk/sites/default/files/cool_spaces_phase_2_-_criteria_and_information.pdf).
 
 The tree canopy layer intends to provide indicative information on potential shade in public open areas across London. These areas should not be confused with designated cool spaces and are not always suitable alternatives for them.
 
