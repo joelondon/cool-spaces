@@ -431,23 +431,34 @@ function App({ showBorder = false, onTilesLoad = null }) {
               <p>
                 To search for cool spaces in a specific location or near you,
                 please go to the{' '}
-                <span style={{ fontVariant: 'small-caps' }}>
-                  find a cool space
-                </span>{' '}
+                <button onClick={() => setTabValue(1)}>
+                  <span style={{ fontVariant: 'small-caps' }}>
+                    find a cool space
+                  </span>{' '}
+                </button>{' '}
                 tab
               </p>
               <p>
                 More information about cool spaces tiers and the sources of data
                 for the different layers on the map can be found in the{' '}
-                <span style={{ fontVariant: 'small-caps' }}>about</span> tab
+                <button onClick={() => setTabValue(4)}>
+                  <span style={{ fontVariant: 'small-caps' }}>about</span>
+                </button>{' '}
+                tab
               </p>
               <p>
                 We are still accepting new registrations of indoor and outdoor
                 cool spaces. If you would like to register a site please
                 complete the form in the{' '}
-                <span style={{ fontVariant: 'small-caps' }}>
-                  register a cool space
-                </span>{' '}
+                <button onClick={() => setTabValue(3)}>
+                  <span
+                    style={{
+                      fontVariant: 'small-caps'
+                    }}
+                  >
+                    register a cool space
+                  </span>{' '}
+                </button>{' '}
                 tab
               </p>
             </FormLabel>
@@ -474,7 +485,10 @@ function App({ showBorder = false, onTilesLoad = null }) {
             </FormControl>
             <FormLabel component="legend">
               To choose what map features to view, please select from the{' '}
-              <span style={{ fontVariant: 'small-caps' }}>layers</span> tab
+              <button onClick={() => setTabValue(0)}>
+                <span style={{ fontVariant: 'small-caps' }}>layers</span>
+              </button>{' '}
+              tab
             </FormLabel>
           </div>
         </TabPanel>
