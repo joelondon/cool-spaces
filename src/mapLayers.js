@@ -18,7 +18,8 @@ export const mapLayers = {
   'Tree canopy cover': {
     value: 'treecanopy',
     showing: true,
-    about: 'Indicative location of areas with shading from trees.'
+    about:
+      'Indicative location of public open areas with potential for shading from trees.'
   },
   'Cooler areas': {
     value: 'avgLST_London_UrbanAtlas',
