@@ -246,7 +246,7 @@ function App({ showBorder = false, onTilesLoad = null }) {
     map.addControl(
       new mapboxgl.NavigationControl({
         showCompass: false,
-        showZoom: smallScreen ? true : false
+        showZoom: true
       }),
       'top-left'
     )
