@@ -430,26 +430,24 @@ function App({ showBorder = false, onTilesLoad = null }) {
             <FormLabel component="legend">
               <p>
                 To search for cool spaces in a specific location or near you,
-                please go to the{' '}
+                please go to{' '}
                 <button onClick={() => setTabValue(1)}>
                   <span style={{ fontVariant: 'small-caps' }}>
                     find a cool space
                   </span>{' '}
-                </button>{' '}
-                tab
+                </button>
               </p>
               <p>
                 More information about cool spaces tiers and the sources of data
-                for the different layers on the map can be found in the{' '}
+                for the different layers on the map can be found in{' '}
                 <button onClick={() => setTabValue(4)}>
                   <span style={{ fontVariant: 'small-caps' }}>about</span>
-                </button>{' '}
-                tab
+                </button>
               </p>
               <p>
                 We are still accepting new registrations of indoor and outdoor
                 cool spaces. If you would like to register a site please
-                complete the form in the{' '}
+                complete the form in{' '}
                 <button onClick={() => setTabValue(3)}>
                   <span
                     style={{
@@ -458,8 +456,7 @@ function App({ showBorder = false, onTilesLoad = null }) {
                   >
                     register a cool space
                   </span>{' '}
-                </button>{' '}
-                tab
+                </button>
               </p>
             </FormLabel>
           </div>
@@ -484,11 +481,10 @@ function App({ showBorder = false, onTilesLoad = null }) {
               )*/}
             </FormControl>
             <FormLabel component="legend">
-              To choose what map features to view, please select from the{' '}
+              To choose what map features to view, please select from{' '}
               <button onClick={() => setTabValue(0)}>
                 <span style={{ fontVariant: 'small-caps' }}>layers</span>
               </button>{' '}
-              tab
             </FormLabel>
           </div>
         </TabPanel>
