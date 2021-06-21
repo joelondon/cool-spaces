@@ -14,7 +14,9 @@ The tiered approach to classifying cool spaces is meant to provide Londoners wit
 
 The tree canopy layer intends to provide indicative information on potential shade in public open areas across London. These areas should not be confused with designated cool spaces and are not always suitable alternatives for them.
 
-When using London’s parks and green spaces, please remember to [follow guidelines on social distancing](https://www.london.gov.uk/coronavirus/social-distancing-guidance/london-parks-and-green-spaces-covid-19-guidance). Read PHE guidance on [Coping with heat and COVID-19](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/980924/Beat-the-Heat_Leaflet_COVID-19_2021.pdf) and the Mayor’s guidance on [keeping cool on hot days](https://www.london.gov.uk/what-we-do/environment/coping-hot-weather-london).
+When using London’s parks and green spaces, please remember to [follow guidelines on social distancing](https://www.london.gov.uk/coronavirus/social-distancing-guidance/london-parks-and-green-spaces-covid-19-guidance).
+
+For advice on staying safe in hot weather, read PHE guidance on [coping with heat and COVID-19](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/980924/Beat-the-Heat_Leaflet_COVID-19_2021.pdf) and the Mayor’s guidance on [keeping cool on hot days](https://www.london.gov.uk/what-we-do/environment/coping-hot-weather-london).
 
 Data information and credits:
 
