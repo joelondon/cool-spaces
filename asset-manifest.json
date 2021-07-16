@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/cool-spaces/static/css/main.d888ff24.chunk.css",
-    "main.js": "/cool-spaces/static/js/main.0cd4ebfb.chunk.js",
-    "main.js.map": "/cool-spaces/static/js/main.0cd4ebfb.chunk.js.map",
+    "main.js": "/cool-spaces/static/js/main.c4ab958d.chunk.js",
+    "main.js.map": "/cool-spaces/static/js/main.c4ab958d.chunk.js.map",
     "runtime-main.js": "/cool-spaces/static/js/runtime-main.683e85b2.js",
     "runtime-main.js.map": "/cool-spaces/static/js/runtime-main.683e85b2.js.map",
     "static/css/2.bbd0b0b7.chunk.css": "/cool-spaces/static/css/2.bbd0b0b7.chunk.css",
-    "static/js/2.712f19be.chunk.js": "/cool-spaces/static/js/2.712f19be.chunk.js",
-    "static/js/2.712f19be.chunk.js.map": "/cool-spaces/static/js/2.712f19be.chunk.js.map",
+    "static/js/2.a9713edc.chunk.js": "/cool-spaces/static/js/2.a9713edc.chunk.js",
+    "static/js/2.a9713edc.chunk.js.map": "/cool-spaces/static/js/2.a9713edc.chunk.js.map",
     "index.html": "/cool-spaces/index.html",
     "static/css/2.bbd0b0b7.chunk.css.map": "/cool-spaces/static/css/2.bbd0b0b7.chunk.css.map",
     "static/css/main.d888ff24.chunk.css.map": "/cool-spaces/static/css/main.d888ff24.chunk.css.map",
-    "static/js/2.712f19be.chunk.js.LICENSE.txt": "/cool-spaces/static/js/2.712f19be.chunk.js.LICENSE.txt"
+    "static/js/2.a9713edc.chunk.js.LICENSE.txt": "/cool-spaces/static/js/2.a9713edc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.683e85b2.js",
     "static/css/2.bbd0b0b7.chunk.css",
-    "static/js/2.712f19be.chunk.js",
+    "static/js/2.a9713edc.chunk.js",
     "static/css/main.d888ff24.chunk.css",
-    "static/js/main.0cd4ebfb.chunk.js"
+    "static/js/main.c4ab958d.chunk.js"
   ]
 }
