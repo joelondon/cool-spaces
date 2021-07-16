@@ -1397,32 +1397,21 @@
     },
     {
       "id": "findafountain",
-      "type": "symbol",
+      "type": "circle",
       "source": "tileserver-gl",
       "source-layer": "waterfountains",
       "layout": {
-        "text-font": ["Roboto Bold"],
-        "text-field": "{name}",
-        "icon-image": "water-15",
-        "text-offset": [0, 1.7],
-        "icon-size": {
-          "stops": [
-            [5, 0.3],
-            [12, 0.7]
-          ]
-        },
-        "text-size": 12,
-        "text-max-width": 20,
-        "visibility": "none"
+        "visibility": "visible"
       },
       "paint": {
-        "text-opacity": {
+        "circle-radius": {
+          "base": 2,
           "stops": [
-            [10, 0],
-            [12, 1]
+            [12, 4],
+            [16, 30]
           ]
         },
-        "text-color": "white"
+        "circle-color": "#0088cc"
       }
     },
     {
